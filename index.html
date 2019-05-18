@@ -21,23 +21,66 @@
         <img src="" alt="">
     </div>
     <div class="news">
-        <div class="new1">new1</div>
-        <div class="new2">new2</div>
-        <div class="new3">new3</div>
+        <h2>NEWS</h2>
+        <div class="news-container">
+            <div class="news-item">new1</div>
+            <div class="news-item">new2</div>
+            <div class="news-item">new3</div>
+        </div>
     </div>
-    <div class="play">play</div>
+    <div class="play">
+        <h2>PLAY</h2>
+    </div>
     <div class="download">
-        <span>download</span>
+        <h2>DOWNLOAD</h2>
         <img src="img/btn_appstore.png" alt="">
         <img src="img/btn_android.png" alt="">
+        <img class="logo" src="img/logo.png" alt="">
     </div>
-    <div class="feedback">feedback</div>
+    <div class="feedback">
+        <h2>FEEDBACK</h2>
+        <form id="form1" name="form1" method="post" action="send_mail.php">
+            <!--  "name" 當作是變數名稱
+                              "get" (網址上會顯示有保密的問題網址只能250個字元會被刪掉，表單文字內容會超過不建議)/
+                              "post" (頁面上看不到，用後台系統上傳) 方式
+                          -->
+            <div class="input-group">
+                <label class="input-group-addon">Name:</label>
+                <input type="text" class="form-control" placeholder="EX:王大明" name="name" id="name">
+            </div>
+            <div class="input-group">
+                <label class="input-group-addon">TEL:</label>
+                <input type="text" class="form-control" placeholder="EX：0912-123123　or  02-12345678" name="tel" id="tel">
+            </div>
+            <div class="input-group">
+                <label class="input-group-addon">Email:</label>
+                <input type="text" class="form-control" placeholder="EX：xxxxx@jumpdesign.tw" name="email" id="email">
+            </div>
+            <div class="input-group">
+                <label class="input-group-addon">Message:</label>
+                <textarea type="message" class="form-control" placeholder="請輸入您的留言內容" rows="10" name="message" id="message"></textarea>
+            </div>
+            <div>
+                <button type="reset" class="btn">重新填寫</button>
+                <button type="button" class="btn" onclick="checkForm()">確認送出</button>
+                <!-- 你的按鈕指定為type="submit"按下按鈕，就會把表單內容送去指定的處理程式(.php)，
+                                     這樣會造成什麼後果？就算你有設定檢查表單，也會不檢查沒有檢驗過就送出去，
+
+                                     <button type="button" onclick="checkForm()">確認送出</button>
+                                     type="button"，按下去會去checkForm()這個function做檢查，沒有指定的話不會有任何動作，js宣告checkForm變數 -->
+            </div>
+        </form>
+    </div>
     <footer>
         <div class="copyright">copyright</div>
         <div class="rank">rank
-            <img src="img/g.png" alt="">
+            <img src="img/p.png" alt="">
+            保護級（以下簡稱護級）：六歲以上之人始得使用。
+            使用虛擬遊戲幣進行遊戲，且遊戲結果會直接影響虛擬遊戲幣增減之棋牌益智及娛樂類遊戲軟體。
+            對未滿六歲人之行為或心理有不良影響之虞者。
         </div>
     </footer>
 </body>
+<script type="text/javascript" src="js/send_mail.js"></script>
 
 </html>
