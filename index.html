@@ -3,84 +3,152 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Project</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,300,700" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <header>
-        <ul>
-            <li>最新消息</li>
-            <li>遊戲介紹</li>
-            <li>遊戲下載</li>
-            <li>問題回報</li>
-        </ul>
+        <div class="container">
+            <img src="img/Logo.png" alt="">
+            <ul>
+                <a href="#!">
+                    <li>最新消息</li>
+                </a>
+                <a href="#!">
+                    <li>遊戲介紹</li>
+                </a>
+                <a href="#!">
+                    <li>遊戲下載</li>
+                </a>
+                <a href="#!">
+                    <li>問題回報</li>
+                </a>
+            </ul>
+        </div>
     </header>
     <div class="banner">banner > img
         <img src="" alt="">
     </div>
-    <div class="news">
-        <h2>NEWS</h2>
-        <div class="news-container">
-            <div class="news-item">new1</div>
-            <div class="news-item">new2</div>
-            <div class="news-item">new3</div>
+    <div class="news carddesign">
+        <div class="head">
+            <h1>NEWS card'esign</h1>
         </div>
+        <!-- START: carousel -->
+        <div class="card-carousel owl-carousel">
+            <a class="angled-img" href="#">
+                <div class="img">
+                    <img src="https://html.nkdev.info/youplay/dark/assets/images/game-bloodborne-500x375.jpg" alt="">
+                </div>
+            </a>
+            <a class="angled-img" href="#">
+                <div class="img">
+                    <img src="https://html.nkdev.info/youplay/dark/assets/images/game-dark-souls-ii-500x375.jpg" alt="">
+                </div>
+            </a>
+            <a class="angled-img" href="#">
+                <div class="img">
+                    <img src="https://html.nkdev.info/youplay/dark/assets/images/game-soul-sacrifice-500x375.jpg" alt="">
+                </div>
+            </a>
+            <a class="angled-img" href="#">
+                <div class="img">
+                    <img src="https://html.nkdev.info/youplay/dark/assets/images/game-kingdoms-of-amalur-reckoning-500x375.jpg" alt="">
+                </div>
+            </a>
+            <a class="angled-img" href="#">
+                <div class="img">
+                    <img src="https://html.nkdev.info/youplay/dark/assets/images/game-the-witcher-500x375.jpg" alt="">
+                </div>
+            </a>
+            <a class="angled-img" href="#">
+                <div class="img">
+                    <img src="https://html.nkdev.info/youplay/dark/assets/images/game-diablo-iii-500x375.jpg" alt="">
+                </div>
+            </a>
+        </div>
+        <!-- END: carousel -->
     </div>
     <div class="play">
         <h2>PLAY</h2>
+        <div class="play-container">
+            <div class="play-carousel owl-carousel owl-theme">
+            <!-- 
+                            <div class="owl-video-tn owl-lazy" data-src="https://img.youtube.com/vi/H3jLkJrhHKQ/hqdefault.jpg" style="background-image: url('https://img.youtube.com/vi/H3jLkJrhHKQ/hqdefault.jpg'); opacity: 1;"></div> -->
+                <div class="item-video" data-merge="3"><a class="owl-video" href="https://www.youtube.com/watch?v=H3jLkJrhHKQ"></a></div>
+                <div class="item-video" data-merge="3"><a class="owl-video" href="https://www.youtube.com/watch?v=jhR1d6Cssic"></a></div>
+                <div class="item-video" data-merge="3"><a class="owl-video" href="https://www.youtube.com/watch?v=jhR1d6Cssic"></a></div>
+                <div class="item-video" data-merge="3"><a class="owl-video" href="https://www.youtube.com/watch?v=jhR1d6Cssic"></a></div>
+                <div class="item-video" data-merge="3"><a class="owl-video" href="https://www.youtube.com/watch?v=jhR1d6Cssic"></a></div>
+                <div class="item-video" data-merge="3"><a class="owl-video" href="https://www.youtube.com/watch?v=jhR1d6Cssic"></a></div>
+                <div class="item-video" data-merge="3"><a class="owl-video" href="https://www.youtube.com/watch?v=jhR1d6Cssic"></a></div>
+                <div class="item-video" data-merge="3"><a class="owl-video" href="https://www.youtube.com/watch?v=jhR1d6Cssic"></a></div>
+            </div>
+        </div>
     </div>
-    <div class="download">
+    <div class="download" style="background-image: url(img/download.png);">
         <h2>DOWNLOAD</h2>
-        <img src="img/btn_appstore.png" alt="">
-        <img src="img/btn_android.png" alt="">
-        <img class="logo" src="img/logo.png" alt="">
+        <div class="img-group">
+            <img src="img/btn_appstore.png" alt="">
+            <img src="img/btn_android.png" alt="">
+        </div>
     </div>
     <div class="feedback">
         <h2>FEEDBACK</h2>
-        <form id="form1" name="form1" method="post" action="send_mail.php">
-            <!--  "name" 當作是變數名稱
+        <div class="form-container">
+            <form id="form1" name="form1" method="post" action="send_mail.php">
+                <!--  "name" 當作是變數名稱
                               "get" (網址上會顯示有保密的問題網址只能250個字元會被刪掉，表單文字內容會超過不建議)/
                               "post" (頁面上看不到，用後台系統上傳) 方式
                           -->
-            <div class="input-group">
-                <label class="input-group-addon">Name:</label>
-                <input type="text" class="form-control" placeholder="EX:王大明" name="name" id="name">
-            </div>
-            <div class="input-group">
-                <label class="input-group-addon">TEL:</label>
-                <input type="text" class="form-control" placeholder="EX：0912-123123　or  02-12345678" name="tel" id="tel">
-            </div>
-            <div class="input-group">
-                <label class="input-group-addon">Email:</label>
-                <input type="text" class="form-control" placeholder="EX：xxxxx@jumpdesign.tw" name="email" id="email">
-            </div>
-            <div class="input-group">
-                <label class="input-group-addon">Message:</label>
-                <textarea type="message" class="form-control" placeholder="請輸入您的留言內容" rows="10" name="message" id="message"></textarea>
-            </div>
-            <div>
-                <button type="reset" class="btn">重新填寫</button>
-                <button type="button" class="btn" onclick="checkForm()">確認送出</button>
-                <!-- 你的按鈕指定為type="submit"按下按鈕，就會把表單內容送去指定的處理程式(.php)，
+                <div class="input-group">
+                    <label class="input-group-addon">Name:</label>
+                    <input type="text" class="form-control" placeholder="EX:王大明" name="name" id="name">
+                </div>
+                <div class="input-group">
+                    <label class="input-group-addon">TEL:</label>
+                    <input type="text" class="form-control" placeholder="EX：0912-345678" name="tel" id="tel">
+                </div>
+                <div class="input-group">
+                    <label class="input-group-addon">Email:</label>
+                    <input type="text" class="form-control" placeholder="EX：xxxxx@mail.com" name="email" id="email">
+                </div>
+                <div class="input-group">
+                    <label class="input-group-addon">Message:</label><br>
+                    <textarea type="message" class="form-control" placeholder="請輸入您的留言內容" rows="3" name="message" id="message"></textarea>
+                </div>
+                <div>
+                    <button type="button" class="btn" onclick="checkForm()">確認送出</button>
+                    <button type="reset" class="btn">重新填寫</button>
+                    <!-- 你的按鈕指定為type="submit"按下按鈕，就會把表單內容送去指定的處理程式(.php)，
                                      這樣會造成什麼後果？就算你有設定檢查表單，也會不檢查沒有檢驗過就送出去，
 
                                      <button type="button" onclick="checkForm()">確認送出</button>
                                      type="button"，按下去會去checkForm()這個function做檢查，沒有指定的話不會有任何動作，js宣告checkForm變數 -->
-            </div>
-        </form>
+                </div>
+            </form>
+        </div>
     </div>
     <footer>
-        <div class="copyright">copyright</div>
-        <div class="rank">rank
+        <div class="copyright"> &copy; All Rights Reserved. PickUp 2019</div>
+        <div class="rank">
             <img src="img/p.png" alt="">
-            保護級（以下簡稱護級）：六歲以上之人始得使用。
-            使用虛擬遊戲幣進行遊戲，且遊戲結果會直接影響虛擬遊戲幣增減之棋牌益智及娛樂類遊戲軟體。
-            對未滿六歲人之行為或心理有不良影響之虞者。
+            <p>
+                棋牌益智及娛樂類遊戲軟體。<br>
+                保護級（以下簡稱護級）：六歲以上之人始得使用。 <br>
+                對未滿六歲人之行為或心理有不良影響之虞者。</p>
         </div>
     </footer>
 </body>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/owl.carousel.min.js"></script>
 <script type="text/javascript" src="js/send_mail.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
 
 </html>
