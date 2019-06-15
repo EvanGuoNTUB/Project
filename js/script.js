@@ -29,31 +29,3 @@ $('.card-carousel').on('mousewheel', '.owl-stage', function (e) {
     e.preventDefault();
 });
 
-
-$('.play-carousel').owlCarousel({
-        items:1,
-        merge:true,
-        loop:true,
-        margin:10,
-        video:true,
-        lazyLoad:true,
-        center:true,
-        responsive:{
-            480:{
-                items:2
-            },
-            600:{
-                items:4
-            }
-        }
-    })
-
-
-$('.play-carousel').on('mousewheel', '.owl-stage', function (e) {
-    if (e.deltaY>0) {
-        $('.play-carousel').trigger('next.owl');
-    } else {
-        $('.play-carousel').trigger('prev.owl');
-    }
-    e.preventDefault();
-});
